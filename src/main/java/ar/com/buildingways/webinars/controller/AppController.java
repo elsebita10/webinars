@@ -105,7 +105,7 @@ public class AppController {
 	 * updating user in database. It also validates the user input
 	 */
 	@RequestMapping(value = { "/edit-user-{code}" }, method = RequestMethod.POST)
-	public String updateUser(@Valid User user, BindingResult result, ModelMap model, @PathVariable String ssoId) {
+	public String updateUser(@Valid User user, BindingResult result, ModelMap model, @PathVariable String code) {
 		if (result.hasErrors()) {
 			return "registration";
 	    }

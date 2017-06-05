@@ -45,7 +45,6 @@ public class User implements Serializable{
     @Column(name="EMAIL", nullable=false)
     private String email;
     
-    @NotEmpty
     @Column(name="PHONE", nullable=false)
     private String phone;
  
