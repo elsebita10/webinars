@@ -89,6 +89,17 @@
      
             <div class="row">
                 <div class="form-group col-md-12">
+                    <label class="col-md-3 control-lable" for="phone">Teléfono</label>
+                    <div class="col-md-7">
+                        <form:input type="text" path="phone" id="phone" class="form-control input-sm" />
+                        <div class="has-error">
+                            <form:errors path="phone" class="help-inline"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12">
                     <label class="col-md-3 control-lable" for="userProfiles">Roles</label>
                     <div class="col-md-7">
                         <form:select path="userProfiles" items="${roles}" multiple="true" itemValue="id" itemLabel="type" class="form-control input-sm" />

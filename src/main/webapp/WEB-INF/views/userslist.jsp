@@ -24,6 +24,7 @@
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>E-mail</th>
+                        <th>Teléfono</th>
                         <th>ID de usuario</th>
                         <sec:authorize access="hasRole('ADMIN')">
                             <th width="100"></th>
@@ -40,6 +41,7 @@
                         <td>${user.firstName}</td>
                         <td>${user.lastName}</td>
                         <td>${user.email}</td>
+                        <td>${user.phone}</td>
                         <td>${user.code}</td>
                         <sec:authorize access="hasRole('ADMIN')">
                             <td><a href="<c:url value='/edit-user-${user.code}' />" class="btn btn-success custom-width">editar</a></td>
