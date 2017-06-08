@@ -11,9 +11,16 @@
     </head>
 	<body>
 	    <div class="generic-container">
-	        <div class="authbar">
-	            <span><strong>${loggedinuser}</strong>, no está autorizado a acceder a esta página.</span> <span class="floatRight"><a href="<c:url value="/logout" />">Cerrar sesión</a></span>
+	    	<div class="authbar">
+	            <span class="floatRight"><a href="<c:url value="/logout" />">Cerrar sesión</a></span>
 	        </div>
+	        <br>
+	        <div class="alert alert-warning lead">
+            	${error}
+        	</div>
+	        <span class="well floatRight">
+            	Ir a la <a href="<c:url value='/list' />">LISTA DE USUARIOS</a>
+        	</span>
 	    </div>
 	</body>
 </html>

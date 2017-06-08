@@ -126,9 +126,14 @@ public class AppController {
 	 * This method will delete an user by it's CODE value.
 	 */
 	@RequestMapping(value = { "/delete-user-{code}" }, method = RequestMethod.GET)
-	public String deleteUser(@PathVariable String code) {
-		userService.deleteUserByCode(code);
-	    return "redirect:/list";
+	public String deleteUser(@PathVariable String code, ModelMap model) {
+		if(code.equals(getPrincipal())){
+			model.addAttribute("error", "El usuario " + code + " se encuentra logueado en el sistema y no puede eliminarse. " + System.getProperty("line.separator") + "Ingrese con otro usuario con rol de ADMIN para eliminarlo.");
+			return "accessDenied";
+		} else {
+			userService.deleteUserByCode(code);
+		    return "redirect:/list";
+		}
 	}
 	     
 	/**
@@ -144,6 +149,7 @@ public class AppController {
 	  */
 	@RequestMapping(value = "/Acceso_Denegado", method = RequestMethod.GET)
 	public String accessDeniedPage(ModelMap model) {
+		model.addAttribute("error", " no está autorizado a acceder a esta página.");
 		model.addAttribute("loggedinuser", getPrincipal());
 	    return "accessDenied";
 	}
