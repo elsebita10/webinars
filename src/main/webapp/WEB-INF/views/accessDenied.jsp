@@ -4,11 +4,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-        <title>Acceso denegado</title>
-        <link href="<c:url value='/static/css/bootstrap.css' />"  rel="stylesheet"></link>
-        <link href="<c:url value='/static/css/app.css' />" rel="stylesheet"></link>
-        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css" />
+        <title>Acceso denegado</title>        
+        <link href="<c:url value="/static/bootstrap/css/bootstrap.min.css" />" rel="stylesheet"></link>
+		<link href="<c:url value="/static/app.css" />" rel="stylesheet"></link>
+    	<link href="<c:url value="/static/font-awesome/css/font-awesome.min.css" />" rel="stylesheet" type="text/css"></link>
     </head>
+    
 	<body>
 	    <div class="generic-container">
 	    	<div class="authbar">
